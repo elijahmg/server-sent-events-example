@@ -1,0 +1,19 @@
+{
+  "name": "server-sent-events-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "sse-client",
+    "sse-server"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm:start:server\" \"npm:start:client\"",
+    "start:server": "yarn --cwd server/ dev",
+    "start:client": "yarn --cwd client/ dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
